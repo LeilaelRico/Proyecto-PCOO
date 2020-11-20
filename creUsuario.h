@@ -3,7 +3,7 @@ ITESM Querétaro
 Programación Orientada a Objetos
 Avance de Proyecto
 Cristian Leilael Rico Espinosa A01707023
-12/11/2020
+19/11/2020
 */
 #include<iostream>
 using namespace std;
@@ -27,16 +27,18 @@ public:
 
     string get_nombre();
     string get_apellido();
-    void set_nombre(string);
-    void set_apellido(string);
-
     int get_proveedor();
     int get_paquete();
     int get_pago();
     int get_numero();
 
-   /* void set_pago(int);
-    void set_paquete(int);*/
+    void set_nombre(string);
+    void set_apellido(string);
+    void set_proveedor(int);
+    void set_paquete(int);
+    void set_pago(int);
+    void set_numero(int);
+
 };
 
 // Getters
@@ -46,7 +48,7 @@ return nombre;
 }
 
 string Usuario::get_apellido(){
-return nombre;
+return apellido;
 }
 
 int Usuario::get_proveedor(){
@@ -75,10 +77,18 @@ void Usuario::set_apellido(string ape){
 apellido = ape;
 }
 
-/*void Usuario::set_pago(int p){
+void Usuario::set_proveedor(int pr){
+proveedor = pr;
+}
+
+void Usuario::set_pago(int p){
 pago = p;
 }
 
 void Usuario::set_paquete(int pq){
-paquete = pq;*/
+paquete = pq;
+}
 
+void Usuario::set_numero(int nu){
+numero = nu;
+}
