@@ -3,14 +3,15 @@ ITESM Querétaro
 Programación Orientada a Objetos
 Avance de Proyecto
 Cristian Leilael Rico Espinosa A01707023
-19/11/2020
+26/11/2020
 */
 
 #include<iostream>
 #include<cstdlib> // Librería para utilizar la función rand y generar números aleatorios.
-#include "creUsuario.h"
-#include "creProveedor.h" // Incluyo las clases que hice y guardé como encabezados.
+#include "creUsuario.h" // Incluyo las clases que hice y guardé como encabezados.
 #include "creCosto.h"
+#include "Telcel.h" // Ahora no se incluye directamente la clase Proveedor debido a la herencia presente en las clases Movistar y Telcel.
+#include "Movistar.h"
 
 
 using namespace std;
@@ -39,12 +40,12 @@ int main (){
 
     Usuario user; // Se crea una variable llamada user del tipo de la clase "Usuario".
 
-    Proveedor prov1("Telcel"," $20"," 1 dia"," 200 Mb"); // Se crean varios objetos de la clase "Proveedor", cada uno con sus valores privados.
-    Proveedor prov2("Telcel"," $80"," 13 dias"," 1 Gb");
-    Proveedor prov3("Telcel"," $100"," 15 dias"," Ilimitado");
-    Proveedor prov4("Movistar"," $30"," 3 dias"," 300 Mb");
-    Proveedor prov5("Movistar"," $50"," 7 dias"," 600 Mb");
-    Proveedor prov6("Movistar"," $100"," 15 dias"," 1.5 Gb");
+    Telcel prov1("Telcel"," $20"," 1 dia"," 200 Mb"); // Se crean varios objetos de la clases hijas de "Proveedor": Telcel y Movistar, cada uno con sus valores privados.
+    Telcel prov2("Telcel"," $80"," 13 dias"," 1 Gb");
+    Telcel prov3("Telcel"," $100"," 15 dias"," Ilimitado");
+    Movistar prov4("Movistar"," $30"," 3 dias"," 300 Mb");
+    Movistar prov5("Movistar"," $50"," 7 dias"," 600 Mb");
+    Movistar prov6("Movistar"," $100"," 15 dias"," 1.5 Gb");
 
     string usernom;
     string userap; // Se crean variables que recibirán datos del usuario. Estas después serán utilizadas en las funciones de los setters correspondientes.
@@ -116,3 +117,4 @@ int main (){
           }
 
 }
+
