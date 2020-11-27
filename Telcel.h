@@ -1,3 +1,10 @@
+/*
+ITESM Querétaro
+Programación Orientada a Objetos
+Avance de Proyecto
+Cristian Leilael Rico Espinosa A01707023
+26/11/2020
+*/
 
 #include "creProveedor.h"
 
